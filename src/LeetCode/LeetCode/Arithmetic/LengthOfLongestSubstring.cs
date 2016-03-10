@@ -12,27 +12,40 @@ namespace LeetCode.Arithmetic
         //Let me think
         public int Solution(string s)
         {
-            //char[] chars = s.ToCharArray();
+            char[] chars = s.ToCharArray();
 
-            //Hashtable hash = new Hashtable();
+            Hashtable hash = new Hashtable();
 
-            //int longest = 0;
+            int longest = 0;
+            int pos = 0;
+            int last = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (hash.ContainsKey(chars[i]))
+                {
+                    last = (int)hash[chars[i]];
+                    //this char after pos  
+                    //当前指向的位置和上一个字符的位置可能相等，这被坑了好久
+                    if (last >= pos)
+                    {
+                        //calculate longest
+                        longest = longest < (i - pos) ? (i - pos) : longest;
 
-            //for (int i = 0; i < s.Length;i++ )
-            //{
-            //    if(hash.ContainsKey(chars[i]))
-            //    {
-            //        longest = longest >= i - (int)hash[chars[i]] ? longest : i - (int)hash[chars[i]];
+                        //position is next char index
+                        pos = (int)hash[chars[i]] + 1;
+                    }
 
-            //        hash[chars[i]] = i;
-            //    }
-            //    else
-            //    {
-            //        hash.Add(chars[i], i);
-            //    }
-            //}
-
-            //return longest;
+                    //update current char's index
+                    hash[chars[i]] = i;
+                }
+                else
+                {
+                    hash.Add(chars[i], i);
+                }
+            }
+            //Last Characters are not repeating
+            longest = longest < s.Length - pos ? s.Length - pos : longest;
+            return longest;
         }
     }
 }

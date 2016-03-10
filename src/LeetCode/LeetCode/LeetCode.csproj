@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arithmetic\AddTwoNumber.cs" />
+    <Compile Include="Arithmetic\FindMedianSortedArrays.cs" />
+    <Compile Include="Arithmetic\LengthOfLongestSubstring.cs" />
+    <Compile Include="Arithmetic\LongestPalindrome.cs" />
     <Compile Include="Arithmetic\TwoSum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

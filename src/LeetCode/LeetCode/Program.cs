@@ -11,19 +11,13 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            TwoSum two = new TwoSum();
+            LongestPalindrome l = new LongestPalindrome();
 
-            int[] first = new int[] { 9, 5, 2, 1, 8 };
-            int target = 17;
-            int[] result = two.Solution(first, target);
-
-            Console.WriteLine("First Index:{0},Second Index:{1}", result[0], result[1]);
-
-            int[] second = new int[] { -4, -5, 0, 0, 18, 200, 5, 0 };
-            target = 11111;
-            result = two.Solution(second, target);
-
-            Console.WriteLine("First Index:{0},Second Index:{1}", result[0], result[1]);
+            Console.WriteLine(l.Solution("abcba"));
+            Console.WriteLine(l.Solution("abcdba"));
+            Console.WriteLine(l.Solution("abcbaaa"));
+            Console.WriteLine(l.Solution("abcbabb"));
+            Console.WriteLine(l.Solution("aaabcba"));
             Console.ReadKey();
         }
     }
