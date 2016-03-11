@@ -11,13 +11,10 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            LongestPalindrome l = new LongestPalindrome();
+            ZigZagConversion z = new ZigZagConversion();
 
-            Console.WriteLine(l.Solution("abcba"));
-            Console.WriteLine(l.Solution("abcdba"));
-            Console.WriteLine(l.Solution("abcbaaa"));
-            Console.WriteLine(l.Solution("abcbabb"));
-            Console.WriteLine(l.Solution("aaabcba"));
+            Console.WriteLine(z.Solution("ABCDE", 4));
+
             Console.ReadKey();
         }
     }

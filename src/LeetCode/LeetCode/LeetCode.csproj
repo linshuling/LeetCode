@@ -46,6 +46,7 @@
     <Compile Include="Arithmetic\LengthOfLongestSubstring.cs" />
     <Compile Include="Arithmetic\LongestPalindrome.cs" />
     <Compile Include="Arithmetic\TwoSum.cs" />
+    <Compile Include="Arithmetic\ZigZagConversion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
