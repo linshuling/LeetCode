@@ -11,7 +11,7 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            LongestPalindrome l = new LongestPalindrome();
+            LongestPalindrome l = new LongestPalindrome(); 
 
             Console.WriteLine(l.Solution("abcba"));
             Console.WriteLine(l.Solution("abcdba"));
